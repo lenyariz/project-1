@@ -13,8 +13,9 @@ while product.lower() != "стоп":
         product_list[product.split(":")[2]] = []
     product_list[product.split(":")[2]].append((product.split(":")[0], int(product.split(":")[1])))
 
-temp_cost = 0
+
 for key, value in product_list.items():
+    temp_cost = 0
     for price in value:
         temp_cost += price[1]
     total_cost[key] = (temp_cost, temp_cost / len(value))
